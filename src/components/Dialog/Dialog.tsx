@@ -29,7 +29,7 @@ interface DialogProps {
 
 }
 
-function selectVisibleStyle(isVisible: bool) {
+function selectVisibleStyle(isVisible: boolean) {
     if (isVisible) return "visible"
     return "invisible"
 }
