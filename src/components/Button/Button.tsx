@@ -1,7 +1,7 @@
 
 export default function Button(props: ButtonProps) {
     return (
-        <button onClick={props.onClick} className={`
+        <button onClick={props.onClick} type={props.inputType} className={`
         ${props.className} ${generateButtonColors(props)} ${generateButtonSizes(props)} 
             flex flex-row justify-center items-center text-white border-none rounded font-raleway font-semibold align-top transition duration-100 hover:scale-[103%]
         ` }>
@@ -17,6 +17,7 @@ interface ButtonProps {
     size: ButtonSizes,
     onClick: React.MouseEventHandler<HTMLButtonElement>,
     className: string,
+    inputType: "button" | "submit" | "reset"
 }
 
 export enum ButtonTypes {
